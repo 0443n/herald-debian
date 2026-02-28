@@ -1,0 +1,23 @@
+Source: herald
+Section: utils
+Priority: optional
+Maintainer: John K <0443n@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               pybuild-plugin-pyproject
+Standards-Version: 4.6.2
+Homepage: https://github.com/0443n/herald
+Rules-Requires-Root: no
+
+Package: herald
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3 (>= 3.11),
+         libnotify-bin
+Description: Secure desktop notifications from root to user sessions
+ Herald delivers notifications from privileged processes (root, systemd
+ timers, cron jobs) to the logged-in user's desktop session, using a
+ local socket and libnotify.

@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=herald
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install
+	install -D -m 644 data/herald-receiver.desktop \
+		debian/herald/etc/xdg/autostart/herald-receiver.desktop
