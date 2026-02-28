@@ -15,7 +15,6 @@ Package: herald
 Architecture: all
 Depends: ${python3:Depends},
          ${misc:Depends},
-         python3 (>= 3.11),
          libnotify-bin
 Description: Secure desktop notifications from root to user sessions
  Herald delivers notifications from privileged processes (root, systemd
